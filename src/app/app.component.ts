@@ -18,16 +18,13 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    if (typeof window !== 'undefined') {
     initFlowbite()
     this.flowbiteService.loadFlowbite(flowbite => {
       // Your custom code here
       console.log('Flowbite loaded', flowbite);
     });
   }
-  ngAfterViewInit(): void {
-    if (typeof document !== 'undefined') {
-      initFlowbite();
-    }
   }
 
 }
