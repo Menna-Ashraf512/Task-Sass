@@ -24,6 +24,10 @@ export class AppComponent implements OnInit {
       console.log('Flowbite loaded', flowbite);
     });
   }
-
+  ngAfterViewInit(): void {
+    if (typeof document !== 'undefined') {
+      initFlowbite();
+    }
+  }
 
 }
