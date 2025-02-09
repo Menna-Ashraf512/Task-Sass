@@ -23,9 +23,10 @@ export class ListitemComponent implements OnInit {
     ) {}
   
     ngOnInit(): void {
+      if (typeof window !== 'undefined') {
         this.getCategory()
-        console.log("jdhdbhcb") 
     }
+  }
     getCategory(){
       this._mealsByNameService.getMealsByName("breakfast").subscribe({
         next:(res)=>{
