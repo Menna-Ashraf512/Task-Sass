@@ -1,0 +1,43 @@
+<div class="m-6">
+    <h1>Learn, Cook, Eat Your Food</h1>
+
+    <ul class="flex gap-5 flex-wrap" *ngIf="!isSmallScreen">
+        <li (click)="getAllMeals()" routerLink="/meals/all" routerLinkActive="bg-black text-white">All</li>
+        <li (click)="getCategory()" routerLink="/meals/breakfast" routerLinkActive="bg-black text-white"> Breakfast</li>
+        <li routerLink="/meals/beef" routerLinkActive="bg-black text-white">Beef</li>
+        <li routerLink="/meals/chicken" routerLinkActive="bg-black text-white">Chicken</li>
+        <li routerLink="/meals/dessert" routerLinkActive="bg-black text-white">Dessert</li>
+        <li routerLink="/meals/goat" routerLinkActive="bg-black text-white">Goat</li>
+        <li routerLink="/meals/lamb" routerLinkActive="bg-black text-white">Lamb</li>
+        <li routerLink="/meals/miscellaneous" routerLinkActive="bg-black text-white">Miscellaneous</li>
+        <li routerLink="/meals/pasta" routerLinkActive="bg-black text-white">Pasta</li>
+        <li routerLink="/meals/pork" routerLinkActive="bg-black text-white">Pork</li>
+        <li routerLink="/meals/seafood" routerLinkActive="bg-black text-white">Seafood</li>
+        <li routerLink="/meals/side" routerLinkActive="bg-black text-white">Side</li>
+        <li routerLink="/meals/starter" routerLinkActive="bg-black text-white">Starter</li>
+        <li routerLink="/meals/vegan" routerLinkActive="bg-black text-white">Vegan</li>
+        <li routerLink="/meals/vegetarian" routerLinkActive="bg-black text-white">Vegetarian</li>
+    </ul>
+
+    <div class="m-6" *ngIf="isSmallScreen">    
+        <select [(ngModel)]="selectedCategory" (change)="navigateToCategory()" class="border p-2 w-80 rounded-md">
+            <option value="/meals/all">All</option>
+            <option value="/meals/breakfast">Breakfast</option>
+            <option value="/meals/beef">Beef</option>
+            <option value="/meals/chicken">Chicken</option>
+            <option value="/meals/dessert">Dessert</option>
+            <option value="/meals/goat">Goat</option>
+            <option value="/meals/lamb">Lamb</option>
+            <option value="/meals/miscellaneous">Miscellaneous</option>
+            <option value="/meals/pasta">Pasta</option>
+            <option value="/meals/pork">Pork</option>
+            <option value="/meals/seafood">Seafood</option>
+            <option value="/meals/side">Side</option>
+            <option value="/meals/starter">Starter</option>
+            <option value="/meals/vegan">Vegan</option>
+            <option value="/meals/vegetarian">Vegetarian</option>
+        </select>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

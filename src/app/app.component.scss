@@ -1,0 +1,41 @@
+.app{
+display: flex;
+min-height: 100vh;
+position: relative;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 640px) {
+    main {
+      margin-left: 45%;
+    }
+  }
+  @media (min-width: 860px) {
+    main {
+      margin-left: 35%;
+    }
+  }
+  @media (min-width: 999px) {
+    main {
+      margin-left: 18%;
+    }
+  }
+  
+
+main{
+    flex-grow: 1;
+    height: auto;
+
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}

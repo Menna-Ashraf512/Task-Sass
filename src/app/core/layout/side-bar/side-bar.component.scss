@@ -1,0 +1,30 @@
+.sideBar{
+    background:#F9FAFB;
+}
+%common{
+    padding-inline:20px ;
+    margin-bottom: 20px;
+    padding-block: 10px;
+    border-radius: 10px;
+}
+.sidebar_item_one{
+    color: aliceblue;
+    background-color: orange;
+    @extend%common;
+    transition: all .2s ease;
+    box-shadow: 0px 6px 7px 1px rgba(128, 128, 128, 0.384);
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: none;
+    }
+}
+
+.sidebar_item{
+    color: black;
+    border:3px solid rgba(128, 128, 128, 0.477) ;
+    @extend%common;
+    transition: all .2s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

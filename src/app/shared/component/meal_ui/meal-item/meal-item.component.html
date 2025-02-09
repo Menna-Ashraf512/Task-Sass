@@ -1,0 +1,15 @@
+<div class="layoutItems">
+    
+    @for (meal of AllMeals; track $index) {
+            <div class="item_Card">
+            <div class="image_Card">
+                <img [src]="meal.strMealThumb" alt="">
+            </div>
+            <div class="content_card">
+                <h4 class="ms-4">{{meal.strMeal}}</h4>
+                <p><i class="fa-solid fa-earth-americas me-2"></i>{{meal.strArea}}</p>
+            </div>
+            <button>View Recipe</button>
+        </div>
+        }
+    </div>

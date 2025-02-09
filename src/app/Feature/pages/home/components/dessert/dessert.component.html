@@ -1,0 +1,21 @@
+@defer(on timer(3s)){
+    <div class="layoutItems">
+        @for (meal of meals; track $index) {
+                <div class="item_Card">
+                <div class="image_Card">
+                    <img [src]="meal.strMealThumb" alt="">
+                </div>
+                <div class="content_card">
+                    <h4 class="ms-4">{{ meal.strMeal.split(' ').slice(0, 3).join(' ') }}</h4>
+                </div>
+                <button>View Recipe</button>
+            </div>
+            }
+        </div>
+    
+}
+@placeholder {
+    <app-placeholder-item></app-placeholder-item>   
+    <app-placeholder-item ></app-placeholder-item>   
+    <app-placeholder-item ></app-placeholder-item>   
+}

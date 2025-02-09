@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.text-white{
+    color:white !important;
+}
+h1 {
+    font-size: 40px;
+    font-family: "Pacifico", serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #EE8A2C, #D4394E);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+ul {
+    border-bottom: solid 0.1px rgba(128, 128, 128, 0.216);
+    margin-block:20px ;
+    li{
+        padding-inline: 20px;
+        padding-block: 5px;
+        border: 1px solid gray;
+        color:  gray;
+        border-radius: 20px;
+        font-size: 18px;
+        font-family: cursive;
+        font-weight: bolder;
+        cursor: pointer;
+
+    }
+}

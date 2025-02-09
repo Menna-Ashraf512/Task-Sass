@@ -1,0 +1,82 @@
+.layoutItems {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    margin-block: 30px;
+}
+
+.item_Card {
+    &:hover{
+    transform: scale(1.05);
+    .image_Card img {
+        transform: rotate(360deg);
+    }
+    }
+    transition: all .2s ease;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 20px;
+    padding-block: 40px;
+    border-radius: 50px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    position: relative;
+    height: 300px;
+    margin-block: 30px;
+    @media (max-width: 1199px) {
+        flex: 1 1 calc(50% - 25px);
+        max-width: calc(50% - 20px);
+    }
+
+    @media (max-width: 767px) {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .content_card{
+        h4{
+           font-size: 22px;
+           font-family: cursive;
+           font-weight: 600;
+           color: #000000; 
+        }
+        p{
+           font-size:18px;
+           font-weight: 500;
+           font-family: cursive;
+           color: #059669; 
+        }
+    }
+    button{
+        padding-block: 10px;
+        padding-inline: 30px;
+        border-radius: 25px;
+        font-size: 17px;
+        background-color: #16c38c;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all .6s ease;
+    }
+    button:hover{
+        background-color: #059669;
+        transform: scale(1.1);
+    }
+    .image_Card {
+
+        position: absolute;
+        top: -40px;
+
+        img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            transition: transform 0.6s ease-in-out;
+            box-shadow: 1px 17px 16px 3px rgba(100, 98, 98, 0.286);
+        }
+
+    }
+}
