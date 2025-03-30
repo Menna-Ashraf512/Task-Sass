@@ -1,9 +1,9 @@
 <div class="app">
-
     <app-side-bar></app-side-bar>
     <div class="mainContent">
         <main class="py-7">
-            <router-outlet></router-outlet>
+            <app-listitem (categorySelected)="onCategorySelected($event)"></app-listitem>
+            <app-all-meals [selectedCategory]="selectedCategory"></app-all-meals>
         </main>
         <footer>
             <app-footer></app-footer>

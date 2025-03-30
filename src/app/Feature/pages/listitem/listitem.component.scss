@@ -24,6 +24,11 @@ ul {
         font-family: cursive;
         font-weight: bolder;
         cursor: pointer;
+        &.active {
+            background-color: rgb(26, 25, 25);
+            color: white;
+            font-weight: bold;
+        }
 
     }
 }

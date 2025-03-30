@@ -1,13 +1,13 @@
 <div class="layoutItems">
-    @for (meal of meals; track $index) {
-            <div class="item_Card">
-            <div class="image_Card">
-                <img [src]="meal.strMealThumb" alt="">
-            </div>
-            <div class="content_card">
-                <h4 class="ms-4">{{meal.strMeal}}</h4>
-            </div>
-            <button>View Recipe</button>
-        </div>
-        }
+@for (meal of meals; track $index) {
+  <div class="item_Card">
+    <div class="image_Card">
+      <img [src]="meals[$index].strMealThumb" alt="{{meals[$index].strMeal}}">
     </div>
+    <div class="content_card">
+      <h4>{{meals[$index].strMeal}}</h4>
+    </div>
+    <button (click)="showVideo($index)">View Recipe</button>
+  </div>
+}
+</div>

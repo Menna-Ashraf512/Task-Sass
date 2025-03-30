@@ -4,11 +4,12 @@ import { initFlowbite } from 'flowbite';
 import { FlowbiteService } from './shared/services/flowbite.service';
 import { SideBarComponent } from "./core/layout/side-bar/side-bar.component";
 import { FooterComponent } from "./core/layout/footer/footer.component";
-import { RouterOutlet } from '@angular/router';
+import { ListitemComponent } from "./Feature/pages/listitem/listitem.component";
+import { AllMealsComponent } from "./Feature/pages/home/components/all-meals/all-meals.component";
 
 @Component({
   selector: 'app-root',
-  imports: [SideBarComponent, FooterComponent,RouterOutlet],
+  imports: [SideBarComponent, FooterComponent, ListitemComponent, AllMealsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -27,4 +28,10 @@ export class AppComponent implements OnInit {
   }
   }
 
+
+  selectedCategory = 'Beef';
+
+  onCategorySelected(category: string) {
+    this.selectedCategory = category;
+  }
 }

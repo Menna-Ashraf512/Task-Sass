@@ -1,8 +1,10 @@
-@defer(on timer(3s)){
-    <app-meal-item></app-meal-item>
+@defer (on timer(3s)) {
+    @if (meals().length > 0) {
+            <app-meal-by-name [meals]="meals()"></app-meal-by-name>
+    }
 }
 @placeholder {
-    <app-placeholder-item ></app-placeholder-item>   
-    <app-placeholder-item ></app-placeholder-item>   
-    <app-placeholder-item ></app-placeholder-item>   
-}
+        <app-placeholder-item></app-placeholder-item>
+        <app-placeholder-item></app-placeholder-item>
+        <app-placeholder-item></app-placeholder-item>
+    }

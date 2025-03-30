@@ -7,11 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class MealsByNameService {
 
-  constructor(private readonly _httpClient:HttpClient) { }
+  constructor(private readonly _httpClient: HttpClient) { }
 
-  getMealsByName(category:string):Observable<any>{
-    return this._httpClient.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+  getMealsByName(category: string): Observable<{ meals: any[] }> {
+    return this._httpClient.get<{ meals: any[] }>(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
   }
-  
-  }
-    
+}
